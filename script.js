@@ -8,25 +8,31 @@ let count =16;
 let moveCount = 0;
 let changeInt = 0;
 const changedPixels = [];
+
 //change pixel style function
 function changePixelStyle(e){
+ 
     console.log(`entered styles`);
     const pixel = e.target;
+    console.log(pixel);
     pixel.classList.add('pixel-move-style');
-    console.log(moveCount);
-
-    changedPixels[moveCount] = pixel.id;
-    console.log(changedPixels);
-    changeInt = changedPixels.length;
     console.log(changeInt);
+
+    //changing value of changeInt before shifting from changedPixels
+    changeInt = changedPixels.length;
+    changedPixels[changeInt] = pixel.id;
+    console.log(changedPixels);
+    
+    console.log(`${changeInt} is changeInt`);
 
 //return pixel style
 
-    if(changeInt>10){
-        let changingPixelInt = changedPixels[0];
-        const changingPixel = document.getElementById(`${changingPixelInt}`);
-        changingPixel.classList.remove('pixel-move-style');
-        
+    if(changeInt>=10){
+        let pixelId = changedPixels[0];
+        console.log(`ID IS ${pixelId}`);
+        const lastPixel = document.getElementById(`${pixelId}`);
+        lastPixel.classList.remove('pixel-move-style');
+        changedPixels.shift();   
     }
     moveCount++;
 
