@@ -49,7 +49,7 @@ function makeContainer(pixelCount){
         for(let j = 0; j<pixelCount; j++){
             const pixel = document.createElement('div');
             pixel.classList.add('pixel-style');
-            pixel.setAttribute(`id`,`${i*10 + j}`);
+            pixel.setAttribute(`id`,`${i*count + j}`);
             pixelRow.appendChild(pixel);
             pixel.addEventListener('mouseover', (e) => changePixelStyle(e));
             
