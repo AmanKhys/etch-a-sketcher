@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+div#container{
+
+    border:rebeccapurple 5px solid;
+    width:fit-content;
+}   
+.pixel-row-style{
+    display:flex;
+}
+.pixel-style{
+    width:20px;
+    height:20px;
+    border: 1px solid rgb(255, 0, 0);
+    background:rgba(0, 0, 0, 0.288);
+    margin:2px;
+}
