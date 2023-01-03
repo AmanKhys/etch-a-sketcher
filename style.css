@@ -20,3 +20,17 @@ div#container{
 .pixel-move-style{
     background:white;
 }
+
+.control-button{
+    color:white;
+    background-color:aquamarine;
+    width:120px;
+    height:70px;
+    margin:20px;
+    font-size:25px;
+    font-weight: bolder;
+    font-style: italic;
+}
+#controls{
+    display:flex;
+}

@@ -9,6 +9,38 @@ let moveCount = 0;
 let changeInt = 0;
 const changedPixels = [];
 
+//declare control buttons
+const button64 = document.createElement('button');
+const reset = document.createElement('button');
+const button16 = document.createElement('button');
+
+button16.classList.add('control-button');
+button64.classList.add('control-button');
+reset.classList.add('control-button');
+
+button16.innerText = "16x16";
+button64.innerText = "64x64";
+reset.innerText = "reset";
+
+controls.appendChild(button16);
+controls.appendChild(button64);
+controls.appendChild(reset);
+
+button16.addEventListener('click', (e)=> changeGrid(16));
+button64.addEventListener('click', (e)=> changeGrid(64));
+reset.addEventListener('click', (e)=> resetGrid(e));
+
+function changeGrid(number) {
+    count = number;
+    container.innerHTML = '';
+    makeContainer(count);
+}
+
+function resetGrid(){
+    container.innerHTML = '';
+    makeContainer(count);
+}
+
 //change pixel style function
 function changePixelStyle(e){
  
