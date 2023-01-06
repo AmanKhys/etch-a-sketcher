@@ -30,7 +30,13 @@ button16.addEventListener('click', (e)=> changeGrid(16));
 button64.addEventListener('click', (e)=> changeGrid(64));
 reset.addEventListener('click', (e)=> resetGrid(e));
 
+//removing element function
+function removeElement(){
+    changedPixels.shift();
+}
 function changeGrid(number) {
+    
+    changedPixels.forEach(removeElement);
     count = number;
     container.innerHTML = '';
     makeContainer(count);
