@@ -2,20 +2,29 @@
 *{
     box-sizing: border-box;
 }
+:root{
+    --pixel-height:calc((500/16)*1px);
+    --margin-height:2px;
+}
 div#container{
-
+    display: flex;
+    flex-direction: column  ;
     border:rebeccapurple 5px solid;
-    width:fit-content;
+    max-width:fit-content;
+    max-height:fit-content;
+    
 }   
 .pixel-row-style{
     display:flex;
 }
 .pixel-style{
-    width:20px;
-    height:20px;
+    position: relative;
+    width:var(--pixel-height);
+    height: var(--pixel-height) ;
     border: 1px solid rgb(255, 0, 0);
     background:rgba(0, 0, 0, 0.288);
-    margin:2px;
+    margin:var(--margin-height);
+    flex:0 1 auto;
 }
 .pixel-move-style{
     background:white;

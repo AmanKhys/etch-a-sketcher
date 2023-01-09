@@ -8,6 +8,7 @@ let count =16;
 let moveCount = 0;
 let changeInt = 0;
 const changedPixels = [];
+let root = document.documentElement;
 
 //declare control buttons
 const button64 = document.createElement('button');
@@ -37,6 +38,8 @@ function removeElement(item,index,arr){
     }
 }
 function changeGrid(number) {
+    root.style.setProperty("--pixel-height",(500/number)+"px");
+    root.style.setProperty("--margin-height",(2/number)*16+"px");
     let shiftCount = 0;
     changedPixels.forEach(removeElement);
     count = number;
